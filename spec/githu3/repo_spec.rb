@@ -19,27 +19,27 @@ describe Githu3::Repo do
     end
     
     it "should fetch its contributors" do
-      stub_get "/repos/technoweenie/faraday/contributors", "repos/faraday-contributors"
+      stub_get "/repos/technoweenie/faraday/contributors", "repos/contributors"
       faraday.contributors.length.should == 8
       faraday.contributors.first.login.should == "technoweenie"
     end
 
     it "should fetch its teams" do
-      stub_get "/repos/technoweenie/faraday/teams", "repos/fake-team"
+      stub_get "/repos/technoweenie/faraday/teams", "repos/team"
       teams = faraday.teams
       teams.length.should == 3
       teams.first.name.should == "Developers"
     end
     
     it "should fetch its tags" do
-      stub_get "/repos/technoweenie/faraday/tags", "repos/faraday-tags"
+      stub_get "/repos/technoweenie/faraday/tags", "repos/tags"
       tags = faraday.tags
       tags.length.should == 18
       tags.first.name.should == "v0.5.6"
     end
     
     it "should fetch its branches" do
-      stub_get "/repos/technoweenie/faraday/branches", "repos/faraday-branches"
+      stub_get "/repos/technoweenie/faraday/branches", "repos/branches"
       branches = faraday.branches
       branches.length.should == 3
       branches.first.name.should == "master"
