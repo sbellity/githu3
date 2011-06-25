@@ -1,0 +1,20 @@
+{
+  "type": "User",
+  "url": "https://api.github.com/users/sbellity",
+  "avatar_url": "https://secure.gravatar.com/avatar/9abf3d284748357bb044d3386796ecd6?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png",
+  "login": "sbellity",
+  "blog": null,
+  "hireable": false,
+  "following": 53,
+  "created_at": "2008-04-02T18:24:06Z",
+  "email": "sbellity@gmail.com",
+  "public_gists": 3,
+  "followers": 13,
+  "html_url": "https://github.com/sbellity",
+  "name": "Stephane Bellity",
+  "company": null,
+  "bio": null,
+  "location": "Paris, France",
+  "id": 4250,
+  "public_repos": 19
+}

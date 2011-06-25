@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://api.github.com/orgs/nuvoli",
+    "login": "nuvoli",
+    "avatar_url": "https://secure.gravatar.com/avatar/e7490ca7d2111a4f2283495aef71f409?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-orgs.png",
+    "id": 578134
+  },
+  {
+    "url": "https://api.github.com/orgs/sixdegrees",
+    "login": "sixdegrees",
+    "avatar_url": "https://secure.gravatar.com/avatar/1605f681326408ae4ce7136509af5205?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-orgs.png",
+    "id": 334012
+  }
+]

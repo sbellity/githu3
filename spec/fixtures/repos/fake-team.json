@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://api.github.com/teams/17383",
+    "name": "Developers",
+    "id": 17383
+  },
+  {
+    "url": "https://api.github.com/teams/129199",
+    "name": "Freelances",
+    "id": 129199
+  },
+  {
+    "url": "https://api.github.com/teams/32067002",
+    "name": "Guests",
+    "id": 32067002
+  }
+]

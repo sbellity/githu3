@@ -1,0 +1,58 @@
+[
+  {
+    "contributions": 165,
+    "url": "https://api.github.com/users/technoweenie",
+    "login": "technoweenie",
+    "id": 21,
+    "avatar_url": "https://secure.gravatar.com/avatar/821395fe70906c8290df7f18ac4ac6cf?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png"
+  },
+  {
+    "contributions": 60,
+    "url": "https://api.github.com/users/sferik",
+    "login": "sferik",
+    "id": 10308,
+    "avatar_url": "https://secure.gravatar.com/avatar/1f74b13f1e5c6c69cb5d7fbaabb1e2cb?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png"
+  },
+  {
+    "contributions": 49,
+    "url": "https://api.github.com/users/mislav",
+    "login": "mislav",
+    "id": 887,
+    "avatar_url": "https://secure.gravatar.com/avatar/8f93a872e399bc1353cc8d4e791d5401?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png"
+  },
+  {
+    "contributions": 29,
+    "url": "https://api.github.com/users/zenhob",
+    "login": "zenhob",
+    "id": 12092,
+    "avatar_url": "https://secure.gravatar.com/avatar/1001027e42c80c1e6d76a0d613c9aa59?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png"
+  },
+  {
+    "contributions": 7,
+    "url": "https://api.github.com/users/eric",
+    "login": "eric",
+    "id": 470,
+    "avatar_url": "https://secure.gravatar.com/avatar/6ec4980d1d5c39bc44bff4170bfd0313?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png"
+  },
+  {
+    "contributions": 4,
+    "url": "https://api.github.com/users/josevalim",
+    "login": "josevalim",
+    "id": 9582,
+    "avatar_url": "https://secure.gravatar.com/avatar/e837f6b7fd146ab16ed3d663476c063e?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png"
+  },
+  {
+    "contributions": 3,
+    "url": "https://api.github.com/users/Flameeyes",
+    "login": "Flameeyes",
+    "id": 74834,
+    "avatar_url": "https://secure.gravatar.com/avatar/7298d3f690c8bdf6b3bd628b6bef1f91?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png"
+  },
+  {
+    "contributions": 1,
+    "url": "https://api.github.com/users/smparkes",
+    "login": "smparkes",
+    "id": 4292,
+    "avatar_url": "https://secure.gravatar.com/avatar/22a6f7874e255566c4f6797e7b78f188?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png"
+  }
+]

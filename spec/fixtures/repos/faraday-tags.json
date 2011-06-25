@@ -1,0 +1,164 @@
+[
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.5.6",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.5.6",
+    "commit": {
+      "sha": "deb794faad098f83335c11710203e23a7241319c",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/deb794faad098f83335c11710203e23a7241319c"
+    },
+    "name": "v0.5.6"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.5.7",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.5.7",
+    "commit": {
+      "sha": "cb03cd2eb924129fd12cd501ee4178fc0dccaefe",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/cb03cd2eb924129fd12cd501ee4178fc0dccaefe"
+    },
+    "name": "v0.5.7"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.1.1",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.1.1",
+    "commit": {
+      "sha": "3c166066ca364d9caebd3710adebd6ebde61cddb",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/3c166066ca364d9caebd3710adebd6ebde61cddb"
+    },
+    "name": "v0.1.1"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.3.0",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.3.0",
+    "commit": {
+      "sha": "3313836ae9c016e835c03f186de641b11a8cc3a8",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/3313836ae9c016e835c03f186de641b11a8cc3a8"
+    },
+    "name": "v0.3.0"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.2.1",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.2.1",
+    "commit": {
+      "sha": "ba31dbf39a3bfb7100c580751f31edc3513cba20",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/ba31dbf39a3bfb7100c580751f31edc3513cba20"
+    },
+    "name": "v0.2.1"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.1.2",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.1.2",
+    "commit": {
+      "sha": "86f5a2a83dae49db9f015ef5fca7816b2f9c6203",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/86f5a2a83dae49db9f015ef5fca7816b2f9c6203"
+    },
+    "name": "v0.1.2"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.3.1",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.3.1",
+    "commit": {
+      "sha": "4d266f42b68013139c6015606f2cfbe4b492d49f",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/4d266f42b68013139c6015606f2cfbe4b492d49f"
+    },
+    "name": "v0.3.1"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.5.0",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.5.0",
+    "commit": {
+      "sha": "101c55f10b5995d40141be3b35a78fe5dd947cc6",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/101c55f10b5995d40141be3b35a78fe5dd947cc6"
+    },
+    "name": "v0.5.0"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.5.1",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.5.1",
+    "commit": {
+      "sha": "54d4813c98606f712f55904925b122e8881e19d0",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/54d4813c98606f712f55904925b122e8881e19d0"
+    },
+    "name": "v0.5.1"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.6.0",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.6.0",
+    "commit": {
+      "sha": "74c8201857c0ddb77aa51dbfee8d8d6a2ecd9200",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/74c8201857c0ddb77aa51dbfee8d8d6a2ecd9200"
+    },
+    "name": "v0.6.0"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.5.2",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.5.2",
+    "commit": {
+      "sha": "53397635da83a2f4b5e862b5e59cc66f6c39f9c6",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/53397635da83a2f4b5e862b5e59cc66f6c39f9c6"
+    },
+    "name": "v0.5.2"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.6.1",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.6.1",
+    "commit": {
+      "sha": "6411855dce705d873e64139d9f97f92dcfae7956",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/6411855dce705d873e64139d9f97f92dcfae7956"
+    },
+    "name": "v0.6.1"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.7.0",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.7.0",
+    "commit": {
+      "sha": "d7c23bc2e8ad3a309a96f4d09a0fb26fd9c524bc",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/d7c23bc2e8ad3a309a96f4d09a0fb26fd9c524bc"
+    },
+    "name": "v0.7.0"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.5.3",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.5.3",
+    "commit": {
+      "sha": "53d4244e97e199b9ceecbd4a41c712e116c69a31",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/53d4244e97e199b9ceecbd4a41c712e116c69a31"
+    },
+    "name": "v0.5.3"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.7.1",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.7.1",
+    "commit": {
+      "sha": "41c3e49e672b54bef2fe8d383afc2f8623dd4a90",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/41c3e49e672b54bef2fe8d383afc2f8623dd4a90"
+    },
+    "name": "v0.7.1"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.5.4",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.5.4",
+    "commit": {
+      "sha": "67f5c0b580f7bc5d77030bca27d24542eb8f85f0",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/67f5c0b580f7bc5d77030bca27d24542eb8f85f0"
+    },
+    "name": "v0.5.4"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.7.2",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.7.2",
+    "commit": {
+      "sha": "2ce28e9a81a77bc396850991d86564fd09a9b150",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/2ce28e9a81a77bc396850991d86564fd09a9b150"
+    },
+    "name": "v0.7.2"
+  },
+  {
+    "tarball_url": "https://github.com/technoweenie/faraday/tarball/v0.5.5",
+    "zipball_url": "https://github.com/technoweenie/faraday/zipball/v0.5.5",
+    "commit": {
+      "sha": "825c86d4c4dd7f65667f4c4b18b73fb2f07e9076",
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/825c86d4c4dd7f65667f4c4b18b73fb2f07e9076"
+    },
+    "name": "v0.5.5"
+  }
+]

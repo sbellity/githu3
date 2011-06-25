@@ -1,0 +1,23 @@
+[
+  {
+    "commit": {
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/91df303b8615efdf5f52dad75cff9a4735cdb8d2",
+      "sha": "91df303b8615efdf5f52dad75cff9a4735cdb8d2"
+    },
+    "name": "master"
+  },
+  {
+    "commit": {
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/bc4f92bc8325afd1a4cdd105ef98462205e8aced",
+      "sha": "bc4f92bc8325afd1a4cdd105ef98462205e8aced"
+    },
+    "name": "typhoeus-parse-blank-header-lines"
+  },
+  {
+    "commit": {
+      "url": "https://api.github.com/repos/technoweenie/faraday/commits/03e39d92ac65d777be3c10bf125b4c516c5cdc77",
+      "sha": "03e39d92ac65d777be3c10bf125b4c516c5cdc77"
+    },
+    "name": "0.5.6.pre"
+  }
+]
