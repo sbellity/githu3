@@ -51,6 +51,16 @@ describe Githu3::Client do
       @client.following?('mildesdavis').should be_false
     end
     
+    it "should list my followers" do
+      stub_get "/user/followers", "users/followers"
+      @client.followers.length.should == 13
+    end
+    
+    it "should list my following" do
+      stub_get "/user/following", "users/following"
+      @client.following.length.should == 30
+    end
+
   end
 
 end

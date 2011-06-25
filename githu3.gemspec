@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
   gem.required_rubygems_version = Gem::Requirement.new('>= 1.3.6')
 
-  gem.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
+  gem.test_files = `git ls-files -- spec/*`.split("\n")
 
   gem.version = Githu3::VERSION.dup
 

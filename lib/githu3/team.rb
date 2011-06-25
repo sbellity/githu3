@@ -8,7 +8,7 @@ module Githu3
     def member?(user_login)
       _client.conn.get("/teams/#{id}/members/#{user_login}").status == 204
     end
-    
+        
   end
 
 end
