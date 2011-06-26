@@ -11,7 +11,7 @@ require 'active_support/inflections'
 
 module Githu3
   
-  Resources = %w{ issue org team user tag branch repo key }
+  Resources = %w{ issue org team user tag branch repo key event comment label milestone }
 
   autoload :Resource, 'githu3/resource'
   autoload :Client,   'githu3/client'

@@ -8,7 +8,7 @@ describe Githu3::Client do
   
   describe "Getting my stuff..." do
     it "should be true if method exists" do
-      Githu3::VERSION.should  == '0.0.1'
+      defined?(Githu3::VERSION).should be_true
     end
     
     

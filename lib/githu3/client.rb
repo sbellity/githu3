@@ -30,7 +30,7 @@ module Githu3
       res.body
     end
     
-    
+    # Top level resources...
     %w{ org repo team user }.each do |r|
       define_method r do |ident|
         Githu3.const_get(r.camelize).new(get("/#{r.pluralize}/#{ident}"), self)
