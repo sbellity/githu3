@@ -11,11 +11,14 @@ require 'active_support/inflections'
 
 module Githu3
   
+
+  require 'githu3/store'
+  require 'githu3/relations'
+  require 'githu3/resource'
+  require 'githu3/client'
+  
   Resources = %w{ issue org team user tag branch repo key event comment label milestone }
 
-  autoload :Resource, 'githu3/resource'
-  autoload :Client,   'githu3/client'
-  
   Resources.each do |r|
     autoload r.camelize.to_sym, "githu3/#{r}"
   end
