@@ -37,7 +37,7 @@ describe Githu3::Repo do
     
     it "should get a single comment" do
       # TODO... check if github updates the route...
-      pending
+      pending("Waiting for a relpy's from github's team on the route...")
     end
   end
   
