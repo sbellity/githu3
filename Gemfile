@@ -2,6 +2,6 @@ source :rubygems
 
 gemspec
 
-group :development, :test do
+group :development do
   gem 'autotest-growl'
 end

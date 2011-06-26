@@ -1,19 +1,32 @@
-require 'active_support/concern'
-
 module Githu3
 
   module Relations
 
     def has_many m, klass=nil
-      define_method(m) do |params={}|
+      define_method(m) do |*args|
+        params = args.extract_options!
         klass ||= Githu3.const_get(m.to_s.singularize.camelize)
         get([path, m].join("/"), :params => params).map { |o| klass.new(o, @client) }
       end
     end
-
   end
   
-  class Resource < OpenStruct
+  class Store
+    
+    attr_reader :id
+    
+    def initialize data
+      @id = data[:id] || data["id"]
+      @attributes = OpenStruct.new(data)
+    end
+    
+    def method_missing m, *args
+      @attributes.send m, *args
+    end
+    
+  end
+  
+  class Resource < Store
       
     extend Githu3::Relations
   
