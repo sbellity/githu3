@@ -2,6 +2,11 @@ source :rubygems
 
 gemspec
 
+
+platforms :jruby do
+  gem "jruby-openssl", "~> 0.7"
+end
+
 group :development, :test do
   gem 'autotest-growl'
   gem 'rake',            '~> 0.9'
