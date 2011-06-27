@@ -67,10 +67,10 @@ module Githu3
       links = src.scan(/<http[^<]+/i)
       return [] if links.nil?      
       links.inject({}) do |ll,l|
-        m = /<(?<url>.*)>;(.*)rel=("|')(?<rel>[^"']*)("|')(.*)/i.match(l)
-        uri = URI.parse(m[:url])
+        m = /<(.*)>;(.*)rel=["|']([^"']*)["|'](.*)/i.match(l)
+        uri = URI.parse(m[1])
         query = uri.query.split("&").inject({}) { |q,a| k,v=a.split("="); q.merge(k => v.to_i) }
-        ll.merge(m[:rel] => query["page"])
+        ll.merge(m[3] => query["page"])
       end
     end
             

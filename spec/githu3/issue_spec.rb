@@ -1,6 +1,6 @@
 require 'helper'
 
-describe Githu3::Repo do
+describe Githu3::Issue do
 
   def repo
     stub_get "/repos/technoweenie/faraday", "repos/faraday"
