@@ -9,11 +9,19 @@ module Githu3
     has_many :public_members, :class_name => :user
     
     def member?(user_login)
-      _client.conn.get("/orgs/#{login}/members/#{user_login}").status == 204
+      begin
+        _client.conn.get("/orgs/#{login}/members/#{user_login}").status == 204
+      rescue Githu3::NotFound
+        false
+      end
     end
     
     def public_member?(user_login)
-      _client.conn.get("/orgs/#{login}/public_members/#{user_login}").status == 204
+      begin
+        _client.conn.get("/orgs/#{login}/public_members/#{user_login}").status == 204
+      rescue Githu3::NotFound
+        false
+      end
     end
     
   end

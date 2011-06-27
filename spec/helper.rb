@@ -15,7 +15,7 @@ def fixture(file)
 end
 
 def stub_get url, fixture_name, headers={ 'Authorization'=>'token myvalidtoken' }
-  stub_request(:get, "https://api.github.com#{url}").
+  stub_request(:get, "#{Githu3::Client::BaseUrl}#{url}").
            with(:headers => headers).
            to_return(:status => 200, :body => fixture("#{fixture_name}.json"))
 end

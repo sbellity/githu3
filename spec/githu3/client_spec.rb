@@ -42,12 +42,12 @@ describe Githu3::Client do
     end
     
     it 'should tell me if i am following someone else...' do
-      stub_request(:get, "https://api.github.com/user/following/billevans").to_return(:status => 204)
+      stub_request(:get, "#{Githu3::Client::BaseUrl}/user/following/billevans").to_return(:status => 204)
       @client.following?('billevans').should be_true
     end
     
     it 'should tell me if i am NOT following someone else...' do
-      stub_request(:get, "https://api.github.com/user/following/mildesdavis").to_return(:status => 404)
+      stub_request(:get, "#{Githu3::Client::BaseUrl}/user/following/mildesdavis").to_return(:status => 404)
       @client.following?('mildesdavis').should be_false
     end
     

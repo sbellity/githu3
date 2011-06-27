@@ -1,8 +1,16 @@
-= githu3
+# githu3 [![Build Status](http://travis-ci.org/sbellity/githu3.png)](http://travis-ci.org/sbellity/githu3)
 
-Description goes here.
 
-== Contributing to githu3
+## Installation
+
+    gem install githu3
+    
+## Usage
+  
+  
+
+
+## Contributing to githu3
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
@@ -13,7 +21,7 @@ Description goes here.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
 
-== Copyright
+## Copyright
 
 Copyright (c) 2011 Stephane Bellity. See LICENSE.txt for
 further details.

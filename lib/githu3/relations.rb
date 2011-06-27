@@ -10,7 +10,7 @@ module Githu3
         if args.length == 1
           klass.new([path, _resource_path, args.first].join("/"), @client)
         else
-          get([path, _resource_path].join("/"), :params => params).map { |o| klass.new(o, @client) }
+          Githu3::ResourceCollection.new(@client, klass, [path, _resource_path].join("/"), params)
         end
       end
     end

@@ -24,12 +24,12 @@ describe Githu3::Org do
     end
     
     it 'should tell me if a user IS a member of the team' do
-      stub_request(:get, "https://api.github.com/orgs/github/members/octocat").to_return(:status => 204)
+      stub_request(:get, "#{Githu3::Client::BaseUrl}/orgs/github/members/octocat").to_return(:status => 204)
       github.member?('octocat').should be_true
     end    
     
     it 'should tell me if a user IS NOT a member of the org' do
-      stub_request(:get, "https://api.github.com/orgs/github/members/billevans").to_return(:status => 404)
+      stub_request(:get, "#{Githu3::Client::BaseUrl}/orgs/github/members/billevans").to_return(:status => 404)
       github.member?('billevans').should be_false
     end    
     
@@ -50,12 +50,12 @@ describe Githu3::Org do
     end
     
     it 'should tell me if a user IS a public_member of the team' do
-      stub_request(:get, "https://api.github.com/orgs/github/public_members/octocat").to_return(:status => 204)
+      stub_request(:get, "#{Githu3::Client::BaseUrl}/orgs/github/public_members/octocat").to_return(:status => 204)
       github.public_member?('octocat').should be_true
     end    
     
     it 'should tell me if a user IS NOT a public_member of the team' do
-      stub_request(:get, "https://api.github.com/orgs/github/public_members/billevans").to_return(:status => 404)
+      stub_request(:get, "#{Githu3::Client::BaseUrl}/orgs/github/public_members/billevans").to_return(:status => 404)
       github.public_member?('billevans').should be_false
     end    
   end

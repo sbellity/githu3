@@ -25,12 +25,12 @@ describe Githu3::Team do
     end
     
     it 'should tell me if a user IS a member of the team' do
-      stub_request(:get, "https://api.github.com/teams/1/members/octocat").to_return(:status => 204)
+      stub_request(:get, "#{Githu3::Client::BaseUrl}/teams/1/members/octocat").to_return(:status => 204)
       team.member?('octocat').should be_true
     end    
     
     it 'should tell me if a user IS NOT a member of the team' do
-      stub_request(:get, "https://api.github.com/teams/1/members/billevans").to_return(:status => 404)
+      stub_request(:get, "#{Githu3::Client::BaseUrl}/teams/1/members/billevans").to_return(:status => 404)
       team.member?('billevans').should be_false
     end
   end

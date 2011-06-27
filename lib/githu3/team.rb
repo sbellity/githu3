@@ -6,7 +6,11 @@ module Githu3
     has_many :repos
     
     def member?(user_login)
-      _client.conn.get("/teams/#{id}/members/#{user_login}").status == 204
+      begin
+        _client.conn.get("/teams/#{id}/members/#{user_login}").status == 204
+      rescue Githu3::NotFound
+        false
+      end
     end
         
   end
