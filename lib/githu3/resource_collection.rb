@@ -8,7 +8,7 @@ module Githu3
     
     def_delegators :@resources, :each, :map, :<<, :length, :sort_by, :select, :detect, :find, :collect
     
-    attr_reader :url, :fetched_pages, :fetch_error, :pagination
+    attr_reader :url, :fetch_error, :pagination
     
     def initialize client, resource_klass, url, params={}, opts={}
       @resource_klass = resource_klass
@@ -19,7 +19,6 @@ module Githu3
       @pagination = {}
       @current_page = (@params["page"] || 1).to_i
       @resources = []
-      @fetched_pages = []
       @fetch_error = false
       fetch
       self
@@ -27,23 +26,26 @@ module Githu3
     
     def fetch(page=nil)
       begin
-        fetched_resources = []
         params = @params.dup.stringify_keys
         params["page"] = page unless page.nil?
         res = @client.get(@url, :params => params)
-        res.body.map do |r|
+        update_pagination(res, params)
+        fetched_resources = []
+        res.body.map do |r| 
           resource = @resource_klass.new(r, @client)
-          fetched_resources << resource unless @resources.include?(resource)
+          fetched_resources << resource
+          @resources << resource unless @resources.include?(resource)
         end if res.body.is_a?(Array)
-        @pagination = parse_link_header(res.headers['link'])
-        @current_page = params["page"].to_i
-        @fetched_pages << page unless @fetched_pages.include?(page)
-        @resources += fetched_resources
         fetched_resources
       rescue => err
         @fetch_error = err
         raise err
       end
+    end
+    
+    def update_pagination(res, params)
+      @pagination = parse_link_header(res.headers['link'])
+      @current_page = params["page"].to_i
     end
     
     def fetch_next
