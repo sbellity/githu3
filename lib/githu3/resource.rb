@@ -14,6 +14,10 @@ module Githu3
       end
     end
     
+    def id
+      @attributes.id
+    end
+    
     def get *args
       @client.get(*args)
     end

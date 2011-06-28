@@ -17,12 +17,10 @@ describe Githu3::Relations do
       has_many :foos, :class_name => :dummy
     end
     
-    class Githu3::DummyEmbedded
-      extend Githu3::Relations
+    class Githu3::DummyEmbedded < Githu3::Resource
     end
     
-    class Githu3::DummyMultiEmbedded
-      extend Githu3::Relations
+    class Githu3::DummyMultiEmbedded < Githu3::Resource
     end
     
     class Githu3::DummyEmbedding < Githu3::Resource
@@ -47,14 +45,14 @@ describe Githu3::Relations do
         :url => "https://api.github.com/dummy_relatings/123/dummy_relateds/1"
       }])
       
-      stub_request(:get, "#{Githu3::Client::BaseUrl}/dummy_relatings/123/dummy_relateds")
-          .to_return(:status => 200, :body => dummy_response)
+      stub_request(:get, "#{Githu3::Client::BaseUrl}/dummy_relatings/123/dummy_relateds").
+          to_return(:status => 200, :body => dummy_response)
       rel.dummy_relateds.first.url.should == "https://api.github.com/dummy_relatings/123/dummy_relateds/1"
       rel.dummy_relateds.first.should be_an_instance_of Githu3::DummyRelated
 
 
-      stub_request(:get, "#{Githu3::Client::BaseUrl}/dummy_relatings/123/dummies")
-          .to_return(:status => 200, :body => dummy_response)
+      stub_request(:get, "#{Githu3::Client::BaseUrl}/dummy_relatings/123/dummies").
+          to_return(:status => 200, :body => dummy_response)
       rel.dummies.first.should be_an_instance_of Githu3::Dummy
     end
 
