@@ -61,7 +61,7 @@ When authenticated, your Githu3::Client instance can give you direct access to y
     my_repos = me.repos
     
     # Me
-    me = me.me # -> well, you get the point...
+    me = me.me                # -> well, you get the point...
 
     # Followers
     me.following              # -> returns a list a the Githu3::User, that you follow

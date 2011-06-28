@@ -53,11 +53,10 @@ module Githu3
 
     # My stuf...
 
-    def user
+    def me
       require_auth
       Githu3::User.new "/user", self
     end
-    alias :me :user
     
     def orgs params={}
       require_auth
