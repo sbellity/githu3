@@ -15,14 +15,24 @@ module Githu3
     
     def_delegator :conn, :rate_limit
     
-    attr_reader :conn, :token
+    attr_reader :conn, :auth
   
     def initialize(*args)
       opts = args.extract_options!
-      @token = args.first
-      headers = {}
-      headers["Authorization"] = "token #{@token}" if @token
-      @conn = Githu3::Connection.new headers, opts
+      @conn = Githu3::Connection.new opts do |c|
+        case args.length
+        when 1
+          @auth = :token
+          c.headers["Authorization"] = "token #{args.first}"
+        when 2
+          @auth = :basic
+          c.basic_auth(*args)
+        end
+      end
+    end
+    
+    def authenticated?
+      !!@auth
     end
     
     def get *args
@@ -43,34 +53,53 @@ module Githu3
 
     # My stuf...
 
-    def me
+    def user
+      require_auth
       Githu3::User.new "/user", self
     end
+    alias :me :user
     
     def orgs params={}
+      require_auth
       Githu3::ResourceCollection.new(self, Githu3::Org, "/user/orgs", params)
     end
     
     def repos params={}
+      require_auth
       Githu3::ResourceCollection.new(self, Githu3::Repo, "/user/repos", params)
     end
   
+    def teams
+      require_auth
+      Githu3::ResourceCollection.new(self, Githu3::Team, "/user/teams")
+    end
+  
     def followers params={}
+      require_auth
       Githu3::ResourceCollection.new(self, Githu3::User, "/user/followers", params)
     end
   
     def following params={}
+      require_auth
       Githu3::ResourceCollection.new(self, Githu3::User, "/user/following", params)
     end
     
     def following?(other_user)
+      require_auth
       begin
         get("/user/following/#{other_user}").status == 204
       rescue Githu3::NotFound
         false
       end
     end
-  
+    
+    protected
+    
+    def require_auth
+      raise Githu3::Unauthorized, "You must me logged in to use this method" unless authenticated?
+      yield if block_given?
+    end
+    
   end
 
 end

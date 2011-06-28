@@ -4,13 +4,12 @@ module Githu3
   
   class Connection
     
-    attr_reader :rate_limit, :cache
+    attr_reader :rate_limit, :cache, :conn
     
-    def initialize headers, opts={}
-      @conn = Faraday.new({
-        :url => Githu3::Client::BaseUrl, 
-        :headers => headers
-      })
+    
+    
+    def initialize opts={}
+      @conn = Faraday.new({ :url => Githu3::Client::BaseUrl })
       
       @conn.adapter opts[:adapter] if opts[:adapter]
       @conn.use Faraday::Response::ParseJson
@@ -20,6 +19,8 @@ module Githu3
         cache_klass = Githu3::Cache.const_get(opts[:cache].to_s.camelize)
         @cache = cache_klass.new(opts[:cache_config])
       end
+      
+      yield @conn if block_given?
       
       @rate_limit = {}
     end
