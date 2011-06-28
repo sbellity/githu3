@@ -2,7 +2,7 @@ require 'fileutils'
 
 module Githu3
   module Cache
-    class File
+    class Disk
       attr_reader :config, :store
       
       DEFAULTS = { 
