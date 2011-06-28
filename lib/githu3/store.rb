@@ -7,10 +7,10 @@ module Githu3
       @id = data[:id] || data["id"]
       @attributes = OpenStruct.new(data)
     end
-  
+    
     def method_missing m, *args
       @attributes.send m, *args
     end
-  
+      
   end
 end

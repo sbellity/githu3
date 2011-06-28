@@ -3,7 +3,11 @@ module Githu3
     
     has_many :events
     has_many :comments
-    has_many :labels
     
+    # members
+    embeds_many :labels
+    embeds_one  :user
+    embeds_one  :milestone
+    embeds_one  :assignee, :class_name => :user
   end
 end

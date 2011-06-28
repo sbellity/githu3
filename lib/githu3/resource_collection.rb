@@ -1,4 +1,5 @@
 require 'forwardable'
+require 'digest/sha1'
 
 module Githu3
   class ResourceCollection
@@ -8,7 +9,7 @@ module Githu3
     
     def_delegators :@resources, :each, :map, :<<, :length, :sort_by, :select, :detect, :find, :collect
     
-    attr_reader :url, :fetch_error, :pagination
+    attr_reader :url, :fetch_error, :pagination, :current_page
     
     def initialize client, resource_klass, url, params={}, opts={}
       @resource_klass = resource_klass
@@ -25,6 +26,7 @@ module Githu3
     end
     
     def fetch(page=nil)
+      page = page || @current_page unless @current_page == 1
       begin
         params = @params.dup.stringify_keys
         params["page"] = page unless page.nil?
@@ -45,22 +47,27 @@ module Githu3
     
     def update_pagination(res, params)
       @pagination = parse_link_header(res.headers['link'])
-      @current_page = params["page"].to_i
+      @current_page = [1, params["page"].to_i].max
+      @last_page = @pagination['last'] unless @pagination['last'].nil?
     end
     
     def fetch_next
-      return [] unless @pagination["next"]
-      fetch(@pagination["next"])
+      return [] if (@current_page + 1) > @last_page
+      fetch(@current_page + 1)
     end
 
     def fetch_prev
-      return [] unless @pagination["prev"]
-      fetch(@pagination["prev"])
+      return [] if @current_page == 1
+      fetch(@current_page - 1)
     end
     
     def fetch_last
-      return false unless @pagination["last"]
-      fetch(@pagination["last"])
+      return [] unless @pagination["last"]
+      fetch(@last_page)
+    end
+    
+    def fetch_first
+      fetch(1)
     end
 
     

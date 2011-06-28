@@ -1,48 +1,35 @@
 require 'faraday'
-require 'faraday_middleware'
 require 'faraday/response/raise_githu3_error'
+require 'faraday/response/parse_json'
 require 'uri'
+require 'forwardable'
 require 'active_support/core_ext/hash'
 
 module Githu3
 
   class Client
     
+    extend Forwardable
+    
     BaseUrl = "https://api.github.com"
     
-    attr_reader :conn, :rate_limit
+    def_delegator :conn, :rate_limit
+    
+    attr_reader :conn, :token
   
-    def initialize(oauth_token=nil)
+    def initialize(oauth_token=nil, opts={})
+      @token = oauth_token
       headers = {}
       headers["Authorization"] = "token #{oauth_token}" if oauth_token
-      @conn = Faraday.new({
-        :url => Githu3::Client::BaseUrl, 
-        :headers => headers
-      })
-      
-      @conn.use Faraday::Response::ParseJson
-      @conn.use Faraday::Response::RaiseGithu3Error
-      
-      @rate_limit = {}
-      @conn
+      @conn = Githu3::Connection.new headers, opts
     end
-  
+    
     def get *args
       opts = args.extract_options!
       uri = URI.parse(args.shift)
-      uri_params = (opts[:params] || {}).stringify_keys
-      unless uri.query.nil?
-        uri_params.merge(uri.query.split("&").inject({}) { |m,p| k,v=p.split("=", 2); m.merge(k => v)  } )
-      end
-      args.unshift uri.path
-      res = @conn.get(*args) do |req|
-        req.params = uri_params
-        if opts[:params].is_a?(Hash)
-          opts[:params].each { |k,v| req.params[k.to_s] = v.to_s }
-        end
-      end
-      @rate_limit[:limit] = res.headers["x-ratelimit-limit"]
-      @rate_limit[:remaining] = res.headers["x-ratelimit-remaining"]
+      uri.query = (opts[:params] || {}).stringify_keys.merge(Hash.from_url_params(uri.query || "")).to_url_params
+      
+      res = @conn.get(uri, opts[:headers])
       res
     end
     

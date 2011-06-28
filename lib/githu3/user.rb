@@ -8,6 +8,11 @@ module Githu3
     has_many :followers, :class_name => :user
     has_many :following, :class_name => :user
     
+    
+    def to_s
+      login || email || name
+    end
+    
   end
 
 end
