@@ -14,5 +14,13 @@ module Githu3
     has_many :labels
     has_many :milestones
     has_many :keys
+    has_many :comments
+    # has_many :downloads # not working... always returns an empty body
+    
+    embeds_one :owner,      :class_name => :user
+    
+    def to_s
+      [owner, name].join("/")
+    end
   end
 end

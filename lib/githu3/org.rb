@@ -5,7 +5,7 @@ module Githu3
     
     has_many :repos
     has_many :teams
-    has_many :members, :class_name => :user
+    has_many :members,        :class_name => :user
     has_many :public_members, :class_name => :user
     
     def member?(user_login)

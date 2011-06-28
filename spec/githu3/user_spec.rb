@@ -44,4 +44,5 @@ describe Githu3::User do
     end
     
   end
+  
 end

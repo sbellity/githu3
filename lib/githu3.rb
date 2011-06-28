@@ -24,6 +24,7 @@ module Githu3
     branch
     comment 
     commit
+    download
     event 
     git_commit
     issue 

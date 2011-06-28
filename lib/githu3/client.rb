@@ -17,10 +17,11 @@ module Githu3
     
     attr_reader :conn, :token
   
-    def initialize(oauth_token=nil, opts={})
-      @token = oauth_token
+    def initialize(*args)
+      opts = args.extract_options!
+      @token = args.first
       headers = {}
-      headers["Authorization"] = "token #{oauth_token}" if oauth_token
+      headers["Authorization"] = "token #{@token}" if @token
       @conn = Githu3::Connection.new headers, opts
     end
     

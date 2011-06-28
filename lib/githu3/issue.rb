@@ -9,5 +9,10 @@ module Githu3
     embeds_one  :user
     embeds_one  :milestone
     embeds_one  :assignee, :class_name => :user
+    
+    def _mime_type mt
+      "application/vnd.github-issue.#{mt}+json"
+    end
+        
   end
 end

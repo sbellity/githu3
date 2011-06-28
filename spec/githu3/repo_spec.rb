@@ -15,7 +15,7 @@ describe Githu3::Repo do
     
     it "should get the repo infos" do
       faraday.name.should == "faraday"
-      faraday.owner['login'].should == "technoweenie"
+      faraday.owner.login.should == "technoweenie"
     end
     
     it "should fetch its contributors" do

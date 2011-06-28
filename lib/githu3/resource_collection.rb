@@ -7,7 +7,7 @@ module Githu3
     include Enumerable
     extend Forwardable
     
-    def_delegators :@resources, :each, :map, :<<, :length, :sort_by, :select, :detect, :find, :collect
+    def_delegators :@resources, :each, :map, :<<, :length, :sort_by, :select, :detect, :find, :collect, :first, :last
     
     attr_reader :url, :fetch_error, :pagination, :current_page
     
