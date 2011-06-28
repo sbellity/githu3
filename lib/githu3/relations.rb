@@ -28,9 +28,9 @@ module Githu3
         klass = Githu3.const_get(opts[:class_name].to_s.camelize)
         _resource_path = [opts[:nested_in], m].compact.join("/")
         if args.length == 1
-          klass.new([path, _resource_path, args.first].join("/"), @client)
+          klass.new([_path, _resource_path, args.first].join("/"), @client)
         else
-          Githu3::ResourceCollection.new(@client, klass, [path, _resource_path].join("/"), params)
+          Githu3::ResourceCollection.new(@client, klass, [_path, _resource_path].join("/"), params)
         end
       end
     end

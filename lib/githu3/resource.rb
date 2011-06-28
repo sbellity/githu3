@@ -22,21 +22,19 @@ module Githu3
       @client.get(*args)
     end
     
-    def path
+    def _path
       return if url.nil?
       URI.parse(url).path
     end
     
     def method_missing m, *args
-      @attributes.send(m, *args)
+      val = @attributes.send(m, *args)
+      time_val = Time.parse(val) if m =~ /_at$/ rescue nil
+      time_val || val
     end
     
     def _attributes
       @attributes
-    end
-    
-    def date
-      Time.parse(created_at) unless created_at.nil?
     end
     
     protected
