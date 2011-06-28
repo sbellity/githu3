@@ -70,6 +70,16 @@ module Githu3
       fetch(1)
     end
 
+    def next_page
+      np = @current_page + 1
+      np < @last_page ? np : nil
+    end
+    
+    def prev_page
+      pp = @current_page - 1
+      pp > 1 ? pp : nil
+    end
+    
     
     def parse_link_header src
       return {} if src.nil?
