@@ -1,4 +1,4 @@
-# githu3 [![Build Status](http://travis-ci.org/sbellity/githu3.png)](http://travis-ci.org/sbellity/githu3)
+# githu3
 
 githu3 is a ruby wrapper for github's v3 api.
 
