@@ -1,4 +1,4 @@
-# githu3 [![Build Status](http://travis-ci.org/sbellity/githu3.png)](http://travis-ci.org/sbellity/githu3)
+# githu3
 
 githu3 is a ruby wrapper for github's v3 api.
 
@@ -173,6 +173,8 @@ To use them (these are the default options):
       :expiration => 120            # in seconds
     })
 
+    require 'redis'
+    require 'redis-namespace'
     redis_cached_client = Githu3::Client.new('myawesomelyverylongoauth2token', :cache => :redis, :cache_options => {
       :host       => "localhost",     # defaults to localhost
       :port       => 6379             # defaults to 6379
