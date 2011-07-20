@@ -4,8 +4,8 @@ require File.expand_path('../lib/githu3/version', __FILE__)
 Gem::Specification.new do |s|
   s.name            = 'githu3'
   s.version         = Githu3::VERSION.dup
-  s.summary         = %q{Ruby wrapper for the GitHub's v3' API}
-  s.description     = %q{Ruby wrapper for the GitHub's v3' API}
+  s.summary         = %q{Ruby wrapper for GitHub's v3' API}
+  s.description     = %q{Ruby wrapper for GitHub's v3' API}
   s.homepage        = 'https://github.com/sbellity/githu3'
   s.authors         = ['Stephane Bellity']
   s.email           = ['sbellity@gmail.com']
