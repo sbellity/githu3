@@ -4,8 +4,8 @@ require File.expand_path('../lib/githu3/version', __FILE__)
 Gem::Specification.new do |s|
   s.name            = 'githu3'
   s.version         = Githu3::VERSION.dup
-  s.summary         = %q{Ruby wrapper for GitHub's v3' API}
-  s.description     = %q{Ruby wrapper for GitHub's v3' API}
+  s.summary         = %q{Ruby wrapper for GitHub's v3 API}
+  s.description     = %q{Ruby wrapper for GitHub's v3 API}
   s.homepage        = 'https://github.com/sbellity/githu3'
   s.authors         = ['Stephane Bellity']
   s.email           = ['sbellity@gmail.com']
@@ -18,10 +18,10 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new('>= 1.3.6')
 
-  s.add_runtime_dependency      'activesupport',  '~> 3.0.0'
-  s.add_runtime_dependency      'i18n',           '~> 0.5.0'
-  s.add_runtime_dependency      'faraday',        '~> 0.6.0'
-  s.add_runtime_dependency      'multi_json',     '~> 1.0.2'
+  s.add_runtime_dependency      'activesupport',  '~> 3.0'
+  s.add_runtime_dependency      'i18n',           '~> 0.5'
+  s.add_runtime_dependency      'faraday',        '~> 0.6'
+  s.add_runtime_dependency      'multi_json',     '~> 1.0'
   
   s.add_development_dependency  'ZenTest',        '~> 4.5'
   s.add_development_dependency  'rake',           '~> 0.9'
