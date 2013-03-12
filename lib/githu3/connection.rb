@@ -12,7 +12,7 @@ module Githu3
       @conn = Faraday.new({ :url => Githu3::Client::BaseUrl })
       
       @conn.adapter opts[:adapter] if opts[:adapter]
-      @conn.use Faraday::Response::ParseJson
+      @conn.use FaradayMiddleware::ParseJson
       @conn.use Faraday::Response::RaiseGithu3Error
       
       if opts[:cache]

@@ -1,6 +1,6 @@
 require 'faraday'
 require 'faraday/response/raise_githu3_error'
-require 'faraday/response/parse_json'
+require 'faraday_middleware/response/parse_json'
 require 'uri'
 require 'forwardable'
 require 'active_support/core_ext/hash'

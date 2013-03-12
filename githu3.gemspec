@@ -18,10 +18,10 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new('>= 1.3.6')
 
-  s.add_dependency      'activesupport',  '>= 3.0'
+  s.add_dependency      'activesupport',      '>= 3.0'
   s.add_dependency      'i18n'
-  s.add_dependency      'faraday',        '>= 0.6'
-  s.add_dependency      'multi_json',     '>= 1.0'
+  s.add_dependency      'faraday',            '>= 0.8'
+  s.add_dependency      'faraday_middleware', '>= 0.8'
   
   s.add_development_dependency  'ZenTest',        '~> 4.5'
   s.add_development_dependency  'rake',           '~> 0.9'
